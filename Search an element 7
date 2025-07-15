@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+    int n, i, searchElement, found = 0;
+    scanf("%d", &n);
+    int arr[n];
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    scanf("%d", &searchElement);
+    for(i = 0; i < n; i++) {
+        if(arr[i] == searchElement) {
+            found = 1;
+            break;
+        }
+    }
+    if(found) {
+        printf("%d is presented in an array.\n", searchElement);
+    } else {
+        printf("%d is not presented in an array.\n", searchElement);
+    }
+
+    return 0;
+}
